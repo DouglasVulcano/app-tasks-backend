@@ -46,7 +46,7 @@ class TasksRepository
     {
         return $this->model->where('user_id', $userId)
             ->where('done', 0)->limit(1)
-            ->orderBy('id', 'DESC')->get();
+            ->orderBy('id', 'DESC')->first();
     }
 
     /**
